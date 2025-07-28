@@ -1,0 +1,104 @@
+@use '../variables';
+
+.order {
+  padding: 120px 0 150px 0;
+  background: variables.$dark-bg url('../assets/image/order-section.png') no-repeat center/cover;
+  color: variables.$text-light;
+  text-align: center;
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    span {
+      color: variables.$primary-color;
+    }
+  }
+  &__subtitle {
+    color: variables.$text-gray;
+    margin-bottom: 30px;
+  }
+  &__steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  &__step {
+    max-width: 160px;
+    text-align: center;
+    p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  &__form {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  &__form-wrapper {
+    display: flex;
+    flex: 1 1 100%;
+    gap: 15px;
+    width: 100%;
+  }
+  &__field {
+    flex: 1 1 100%;
+    @media (min-width: 480px) {
+      flex: 1 1 45%;
+    }
+  }
+  &__range {
+    div{
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+    span {
+    display: block;
+    margin-top: 5px;
+    }
+  }
+  &__file {
+    background-color: #fefefe;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 7px;
+    &::before{
+      content: url('../assets/icons/file-icon.svg');
+      margin-right: 10px;
+    }
+    input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      font-size: 999px; // чтобы клик попадал везде
+      cursor: pointer;
+    }
+  }
+  &__submit {
+    background: variables.$primary-color;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+    &:hover {
+      background: darken(variables.$primary-color, 10%);
+    }
+  }
+}

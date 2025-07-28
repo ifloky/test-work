@@ -2,10 +2,33 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оформление заказа</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lorem ipsum</title>
+  <meta name="description"
+    content="Быстрое и безопасное оформление заказа. Укажите данные и выберите удобный способ оплаты. Поддержка всех популярных платежных систем." />
+  <meta name="keywords" content="оформление заказа, купить, корзина, оплата, доставка, товары онлайн, e-commerce" />
+  <meta name="author" content="[Ваше имя или компания]" />
+
+  <link rel="canonical" href="https://example.com/order" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Оформление заказа — [Название сайта]" />
+  <meta property="og:description"
+    content="Безопасное оформление заказа с мгновенным подтверждением и поддержкой всех способов оплаты." />
+  <meta property="og:url" content="https://example.com/order" />
+  <meta property="og:image" content="https://example.com/images/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Оформление заказа — [Название сайта]" />
+  <meta name="twitter:description" content="Оформите заказ легко и быстро на нашем сайте." />
+  <meta name="twitter:image" content="https://example.com/images/twitter-card.jpg" />
+
+  <link rel="icon" href="assets/icons/dollar-icon.svg" />
+
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -47,54 +70,59 @@
 
     <div class="order__steps">
       <div class="order__step">
-        <div class="icon icon--circle"><img src="assets/icons/search.svg" alt="Поиск"></div>
+        <div class="icon icon--circle"><img src="assets/icons/search-icon.svg" alt="Поиск"></div>
         <p>Lorem ipsum dolor sit amet</p>
       </div>
       <div class="order__step">
-        <div class="icon icon--circle"><img src="assets/icons/percent.svg" alt="Скидка"></div>
+        <div class="icon icon--circle"><img src="assets/icons/percent-icon.svg" alt="Скидка"></div>
         <p>Consectetur adipiscing elit</p>
       </div>
       <div class="order__step">
-        <div class="icon icon--circle"><img src="assets/icons/doc.svg" alt="Документы"></div>
+        <div class="icon icon--circle"><img src="assets/icons/doc-icon.svg" alt="Документы"></div>
         <p>Sed do eiusmod tempor</p>
       </div>
       <div class="order__step">
-        <div class="icon icon--circle"><img src="assets/icons/mail.svg" alt="Письмо"></div>
+        <div class="icon icon--circle"><img src="assets/icons/mail-icon.svg" alt="Письмо"></div>
         <p>Ea se cillum dolore eu fugiat</p>
       </div>
       <div class="order__step">
-        <div class="icon icon--circle"><img src="assets/icons/money.svg" alt="Оплата"></div>
+        <div class="icon icon--circle"><img src="assets/icons/dollar-icon.svg" alt="Оплата"></div>
         <p>Excepturi sint occaecat cupidatat non proident</p>
       </div>
     </div>
 
     <form class="order__form">
-      <div class="order__field">
-        <label>
-          <select name="system">
-            <option value="">Выберите тип системы</option>
-            <option value="1">Sed ut perspiciatis</option>
-            <option value="2">Nemo enim ipsam</option>
-            <option value="3">El harum quidem</option>
-            <option value="4">Temporibus autem</option>
-          </select>
-        </label>
+      <div class="order__form-wrapper">
+        <div class="order__field">
+          <label>
+            <select name="system">
+              <option value="">Выберите тип системы</option>
+              <option value="1">Sed ut perspiciatis</option>
+              <option value="2">Nemo enim ipsam</option>
+              <option value="3">El harum quidem</option>
+              <option value="4">Temporibus autem</option>
+            </select>
+          </label>
+        </div>
+        <div class="order__field"><input type="email" name="email" placeholder="Ваш e-mail" required></div>
+        <div class="order__field"><input type="text" name="name" placeholder="Ваше имя" required></div>
       </div>
-      <div class="order__field"><input type="email" name="email" placeholder="Ваш e-mail" required></div>
-      <div class="order__field"><input type="text" name="name" placeholder="Ваше имя" required></div>
-      <div class="order__field"><input type="text" name="comment"
-          placeholder="Sed ut perspiciatis, unde omnis iste natus"></div>
-      <div class="order__field">
-        <label class="order__range">
-          <input type="range" name="progress" value="75">
-          <span>75 %</span>
-        </label>
-      </div>
-      <div class="order__field">
-        <label class="order__file">
-          <input type="file" name="file">
-          <span>ПРИКРЕПИТЬ ФАЙЛ</span>
-        </label>
+      <div class="order__form-wrapper">
+        <div class="order__field">
+          <label class="order__range">
+            <div>
+              <span>Sed ut perspiciatis, unde omnis iste natus</span>
+              <span>75 %</span>
+            </div>
+            <input type="range" name="progress" value="75">
+          </label>
+        </div>
+        <div class="order__field">
+          <label class="order__file">
+            <input type="file" name="file">
+            <span>ПРИКРЕПИТЬ ФАЙЛ</span>
+          </label>
+        </div>
       </div>
       <div class="order__field">
         <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
@@ -103,19 +131,21 @@
   </section>
 
   <footer class="footer">
-    <div class="footer__payments">
-      <img src="assets/icons/qiw.png" alt="QIW wallet">
-      <img src="assets/icons/webmoney.png" alt="WebMoney">
-      <img src="assets/icons/yandex.png" alt="Yandex Money">
+    <div class="footer__container">
+      <p class="footer__copyright">© 2018 LOREMIPSUM.NET. Все права защищены.</p>
+      <div class="footer__payments">
+        <div><img src="assets/icons/qiwi-icon.svg" alt="QIW wallet">Qiwi wallet</div>
+        <div><img src="assets/icons/WM-icon.svg" alt="WebMoney">Yandex Money</div>
+        <div><img src="assets/icons/YM-icon.svg" alt="Yandex Money">Web Money</div>
+      </div>
+      <div class="footer__contacts">
+        <a href="mailto:info@lorem22R.com"><img src="assets/icons/mail-blue-icon.svg" alt="QIW wallet">info@lorem22R.com</a>
+        <a href="#"><img src="assets/icons/VK-icon.svg" alt="QIW wallet">Мы в контакте</a>
+      </div>
     </div>
-    <div class="footer__contacts">
-      <a href="mailto:info@lorem22R.com">info@lorem22R.com</a>
-      <a href="#">Мы в контакте</a>
-    </div>
-    <p class="footer__copyright">© 2018 LOREMIPSUM.NET. Все права защищены.</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

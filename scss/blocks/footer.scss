@@ -1,0 +1,60 @@
+@use '../variables';
+
+.footer {
+  background: #3D4050;
+  color: variables.$text-light;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  &__container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  };
+  &__copyright{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-right: 40px;
+    border-right: #C3C3C3 1px solid;
+  }
+  &__payments {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #C3C3C3;
+    gap: 40px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    img {
+      height: 24px;
+    }
+    &::after{
+      content: "";
+      flex: auto;
+      border-right: #C3C3C3 1px solid;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    a {
+      color: #FEFEFE;
+      margin: 0 10px;
+      text-decoration: none;
+      img{
+        margin-right: 10px;
+      }
+      &:hover {
+        color: variables.$primary-color;
+      }
+    }
+  }
+}
