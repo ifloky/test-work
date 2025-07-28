@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">LOREM<span>IPSUM</span>.NET</div>
+      <nav class="header__nav">
+        <a href="#" class="header__link header__link--active">Бизнес</a>
+        <a href="#" class="header__link">О нас</a>
+        <a href="#" class="header__link">Цены</a>
+        <a href="#order" class="header__link">Оформить заказ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="hero__highlight">LOREM IPSUM</span> DOLOR SIT AMET
+        <span class="hero__highlight hero__highlight--blue">ADIPISCING</span>
+      </h1>
+      <ul class="hero__list">
+        <li>Totam rem aperiam eaque ipsa</li>
+        <li>Sti voluptatem accusantium doloremque laudantium</li>
+        <li>Sed ut perspiciatis, unde omnis iste natus error</li>
+      </ul>
+      <div class="hero__buttons">
+        <button class="hero__btn hero__btn--primary">Заказать</button>
+        <button class="hero__btn">Подробнее</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <h2 class="order__title">Оформление <span>заказа</span></h2>
+    <p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+    <div class="order__steps">
+      <div class="order__step">
+        <div class="icon icon--circle"><img src="assets/icons/search.svg" alt="Поиск"></div>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="order__step">
+        <div class="icon icon--circle"><img src="assets/icons/percent.svg" alt="Скидка"></div>
+        <p>Consectetur adipiscing elit</p>
+      </div>
+      <div class="order__step">
+        <div class="icon icon--circle"><img src="assets/icons/doc.svg" alt="Документы"></div>
+        <p>Sed do eiusmod tempor</p>
+      </div>
+      <div class="order__step">
+        <div class="icon icon--circle"><img src="assets/icons/mail.svg" alt="Письмо"></div>
+        <p>Ea se cillum dolore eu fugiat</p>
+      </div>
+      <div class="order__step">
+        <div class="icon icon--circle"><img src="assets/icons/money.svg" alt="Оплата"></div>
+        <p>Excepturi sint occaecat cupidatat non proident</p>
+      </div>
+    </div>
+
+    <form class="order__form">
+      <div class="order__field">
+        <label>
+          <select name="system">
+            <option value="">Выберите тип системы</option>
+            <option value="1">Sed ut perspiciatis</option>
+            <option value="2">Nemo enim ipsam</option>
+            <option value="3">El harum quidem</option>
+            <option value="4">Temporibus autem</option>
+          </select>
+        </label>
+      </div>
+      <div class="order__field"><input type="email" name="email" placeholder="Ваш e-mail" required></div>
+      <div class="order__field"><input type="text" name="name" placeholder="Ваше имя" required></div>
+      <div class="order__field"><input type="text" name="comment"
+          placeholder="Sed ut perspiciatis, unde omnis iste natus"></div>
+      <div class="order__field">
+        <label class="order__range">
+          <input type="range" name="progress" value="75">
+          <span>75 %</span>
+        </label>
+      </div>
+      <div class="order__field">
+        <label class="order__file">
+          <input type="file" name="file">
+          <span>ПРИКРЕПИТЬ ФАЙЛ</span>
+        </label>
+      </div>
+      <div class="order__field">
+        <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__payments">
+      <img src="assets/icons/qiw.png" alt="QIW wallet">
+      <img src="assets/icons/webmoney.png" alt="WebMoney">
+      <img src="assets/icons/yandex.png" alt="Yandex Money">
+    </div>
+    <div class="footer__contacts">
+      <a href="mailto:info@lorem22R.com">info@lorem22R.com</a>
+      <a href="#">Мы в контакте</a>
+    </div>
+    <p class="footer__copyright">© 2018 LOREMIPSUM.NET. Все права защищены.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/order';
+@import 'blocks/footer';
+
+// Переменные
+$primary-color: #2196f3;
+$dark-bg: #1e1e2f;
+$text-light: #fff;
+$text-gray: #999;
+$radius: 50%;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+select,
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    span {
+      color: $primary-color;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 20px;
+  }
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    &--active,
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
