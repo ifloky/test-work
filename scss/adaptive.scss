@@ -1,5 +1,9 @@
 @media (max-width: 978px) {
   .header {
+    &__logo {
+      font-size: calc(20px + (16 + 12 * 0.7) * ((100vw - 320px) / 1280)) !important;
+    }
+
     &__burger {
       display: flex !important;
       flex-direction: column;
@@ -67,6 +71,9 @@
   }
 
   .order {
+    &__dots {
+      display: none !important;
+    }
     &__form-wrapper {
       flex-direction: column;
       align-items: center;

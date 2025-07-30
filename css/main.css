@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @media (max-width: 978px) {
+  .header__logo {
+    font-size: calc(20px + 24.4 * (100vw - 320px) / 1280) !important;
+  }
   .header__burger {
     display: flex !important;
     flex-direction: column;
@@ -53,6 +56,9 @@
     font-size: calc(20px + 24.4 * (100vw - 320px) / 1280) !important;
     line-height: 40px !important;
     margin: 0 !important;
+  }
+  .order__dots {
+    display: none !important;
   }
   .order__form-wrapper {
     flex-direction: column;
@@ -255,9 +261,15 @@
 .order__steps {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   margin-bottom: 40px;
+}
+.order__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .order__step {
   max-width: 160px;
@@ -266,6 +278,20 @@
 .order__step p {
   margin-top: 10px;
   font-size: 0.9rem;
+}
+.order__dots {
+  display: flex;
+  gap: 17px;
+  margin-top: 10px;
+  position: absolute;
+  top: 13px;
+  left: 123px;
+}
+.order__dot {
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
 }
 .order__form {
   max-width: 1200px;
