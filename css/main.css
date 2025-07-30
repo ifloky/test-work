@@ -1,4 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@media (max-width: 978px) {
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  .header__burger span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+  .header__burger.is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .header__burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .header__burger.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .header__burger.is-active span {
+    transition: all 0.3s ease;
+  }
+  .header__nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(16, 16, 29, 0.8980392157);
+    padding: 20px;
+    display: none;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  .header__nav.is-open {
+    display: flex;
+  }
+  .hero {
+    background-position: 50% 0% !important;
+  }
+  .hero__highlight {
+    font-size: calc(20px + 24.4 * (100vw - 320px) / 1280) !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+  }
+  .order__form-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .order__range {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .order__field--range {
+    flex: 1 1 85% !important;
+  }
+  .order__field--range div span {
+    font-size: 10px !important;
+  }
+  .order__field--range div span:nth-child(1) {
+    max-width: 80%;
+    text-align: left;
+  }
+  .order__file span {
+    font-size: 12px !important;
+  }
+  .order__submit {
+    padding: 12px 24px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__copyright {
+    padding-right: 0 !important;
+    border-right: none !important;
+  }
+  .footer__payments {
+    gap: 20px;
+  }
+  .footer__payments::after {
+    display: none !important;
+  }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -6,6 +110,9 @@
   z-index: 1000;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header__burger {
+  display: none;
 }
 .header__container {
   max-width: 1200px;
@@ -163,6 +270,7 @@
 .order__form {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -182,6 +290,40 @@
     flex: 1 1 45%;
   }
 }
+.order__field--range {
+  flex: 2 1 92%;
+  margin-right: 10px;
+}
+.order__field--range input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ccc;
+  border-radius: 3px;
+  outline: none;
+  margin: 0 10px;
+}
+.order__field--range input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2196f3;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.order__field--range input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2196f3;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.order__range {
+  flex: 1 1 100%;
+}
 .order__range div {
   display: flex;
   justify-content: space-between;
@@ -198,7 +340,9 @@
   background-color: #fefefe;
   color: #000;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
@@ -221,7 +365,8 @@
 .order__submit {
   background: #2196f3;
   color: white;
-  padding: 12px 24px;
+  margin-top: 20px;
+  padding: 12px 140px;
   font-weight: bold;
   border-radius: 8px;
   transition: background 0.3s;
