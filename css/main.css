@@ -141,7 +141,7 @@
   font-size: 13px;
   text-transform: uppercase;
 }
-@media (max-width: 768px) {
+@media (max-width: 978px) {
   .header__nav {
     flex-direction: column;
     position: absolute;
