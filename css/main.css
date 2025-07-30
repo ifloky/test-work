@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @media (max-width: 978px) {
   .header__burger {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
